@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: min(2vh, 2vw);
+  overflow: hidden;
+}
+
+body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #dfebed;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#calculator {
+  background-color: #497285;
+  padding: 1rem;
+  box-shadow: 0 0 1rem white;
+  border-radius: 1rem;
+  width: 45rem;
+}
+
+rem {
+  height: auto;
+}
+
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 5rem);
+  grid-template-areas: "clear clear devide multiply" "seven eight nine subtract" "four five six add" "one two three equals" "zero zero decimal equals";
+  grid-gap: 0.75rem;
+}
+
+.button {
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  font-size: 2rem;
+  background-color: darkgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.button:hover {
+  font-size: 1.9rem;
+  text-shadow: 0 0 1rem limegreen;
+  box-shadow: inset 0 0 0.5rem 0.5rem rgba(66, 68, 90, 0.2), 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+#clear, #equals {
+  background-color: #f78536;
+}
+
+#add, #subtract, #multiply, #divide {
+  background-color: lightslategray;
+}
+
+#clear {
+  grid-area: clear;
+}
+
+#devide {
+  grid-area: devide;
+}
+
+#multiply {
+  grid-area: multiply;
+}
+
+#subtract {
+  grid-area: subtract;
+}
+
+#add {
+  grid-area: add;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+
+#equals {
+  grid-area: equals;
+}
+
+#display {
+  background-color: #2b4450;
+  font-size: 3rem;
+  text-align: right;
+  overflow-wrap: break-word;
+  padding: 0.75rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  margin: 0 0 1rem 0;
+  font-family: "Orbitron", sans-serif;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 4.5rem;
+}
+
+#formula {
+  background-color: #2b4450;
+  color: limegreen;
+  font-size: 2rem;
+  text-align: right;
+  overflow-wrap: break-word;
+  padding: 0.95rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-family: "Orbitron", sans-serif;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 3rem;
+}
